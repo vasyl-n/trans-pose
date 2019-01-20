@@ -4,7 +4,6 @@
 
 .TextInput textarea{
   height: 400px;
-  width: calc( 100% - 20px);
   width: 100%;
   padding-left: 20px;
   margin-left: -10px;
@@ -12,4 +11,10 @@
   max-height: 400px;
   min-height: 400px;
   font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .TextInput textarea{
+    width: -webkit-fill-available;
+  }
 }

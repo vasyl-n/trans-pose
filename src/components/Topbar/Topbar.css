@@ -49,3 +49,9 @@
 .is-current {
   border-bottom: white solid 1px !important;
 }
+
+@media (max-width: 900px) {
+  .navigation {
+    display: none;
+  }
+}
