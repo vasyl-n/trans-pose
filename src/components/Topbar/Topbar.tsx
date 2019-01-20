@@ -10,7 +10,7 @@ class Topbar extends Component {
   render() {
     return (
       <div className="Topbar">
-        <div className="logo">Transponse<span>.</span></div>
+        <div className="logo">Transpose<span>.</span></div>
         <div className="navigation">
           <div>Home</div>
           <div>About</div>

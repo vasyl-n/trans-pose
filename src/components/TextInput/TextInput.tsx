@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './TextInput.css'
 
 interface TextInputProps {handleChange: any}
 

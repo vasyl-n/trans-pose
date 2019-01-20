@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './Button.css'
 
-interface ButtonProps {name: string, handleClick: any, red: any}
+interface ButtonProps {className: string; name: string, handleClick: any}
 
 class Button extends Component<ButtonProps, {}> {
   render() {
     return (
-      <div className={this.props.red ? 'Button red' : ''} onClick={this.props.handleClick}>{this.props.name}</div>
+      <div className={this.props.className + ' Button'} onClick={this.props.handleClick}>{this.props.name}</div>
     );
   }
 }

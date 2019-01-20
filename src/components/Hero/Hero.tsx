@@ -12,7 +12,7 @@ class Hero extends Component<HeroProps, {}> {
         <div className="content">
           <div className="header">{this.props.header}</div>
           <div className="copy">{this.props.copy}</div>
-          <Button red name="Go to app" handleClick={this.props.handleClick} />
+          <Button className="red" name="Go to app" handleClick={this.props.handleClick} />
         </div>
       </div>
     );

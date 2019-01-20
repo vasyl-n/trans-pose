@@ -1,14 +1,27 @@
 .Button {
-  margin: 10px 0;
-  height: 30px;
-  width: 100px;
-  color: white;
-  background: red;
   font-size: 11px;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.red {
+  margin: 10px 0;
+  height: 30px;
+  width: 100px;
+  color: white;
+  background: red;
+}
+
+.transpose-numbers {
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid red;
+  height: 20px;
+  width: 20px;
+  border-radius: 12px;
 }
 
 .Button:hover{
