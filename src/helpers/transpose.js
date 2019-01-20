@@ -1,12 +1,11 @@
 import {keys, endings1, endings2, keysNumsMap, numsKeysMap} from './data';
 
-let IS_PLUS;
 let NUMBER;
 
 let allKeysPermutations = [];
-const transposeHandler = (inputText, isPlus, number ) => {
-  IS_PLUS = true;
-  NUMBER = 2;
+const transposeHandler = (inputText, number ) => {
+  if ( number === 0 ) return inputText;
+  NUMBER = number;
   const words = inputText.split('\n').map((el) => {
     return el.split(' ')
   })
@@ -49,17 +48,12 @@ const transpose = (el) => {
 }
 
 const getFinalNum = (num) => {
-  let result;
-  if ( IS_PLUS ) {
-    result = num + NUMBER;
-  } else {
-    result = num - NUMBER;
-  }
+  let result = num + NUMBER;
   if ( result > 12 ) {
-    result = result - 12;
+    return result - 12;
   }
   if ( result < 1 ) {
-    result = 12 - result;
+    return 12 - result;
   }
   return result;
 }
