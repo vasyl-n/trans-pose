@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import './App.css'
-import TextInput from '../TextInput/TextInput';
-import Button from '../Button/Button';
-import { transposeHandler } from '../../helpers/transpose.js'
+import Transpose from '../Transpose/Transpose'
+import Topvar from '../Topbar/Topbar'
+import Topbar from '../Topbar/Topbar';
+import Hero from '../Hero/Hero';
+import Footer from '../Footer/Footer';
+
 
 class App extends Component {
   state = {
-    currentInput: '',
-    isPlus: true,
-    number: 2,
-  }
-  handleSubmit = (input: string) => {
-    transposeHandler(this.state.currentInput, true, 3)
-  }
-
-  handleInputChange = (input: string) => {
-    this.setState({currentInput: input})
   }
 
   render() {
     return (
       <div className="App">
-        <TextInput handleChange={this.handleInputChange} />
-        <Button name='Transpose' handleSubmit={this.handleSubmit}/>
+        <Topbar />
+        <Hero 
+          header='Transpose all your songs'
+          copy="Blah blah blah blaaaaa blaaahhh"
+          handleClick={()=> 'ble'}
+        />
+          
+        <Transpose />
+        <Footer />
       </div>
     );
   }

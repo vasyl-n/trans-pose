@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './Button.css'
 
-interface ButtonProps {name: string, handleSubmit: any}
+interface ButtonProps {name: string, handleClick: any, red: any}
 
 class Button extends Component<ButtonProps, {}> {
   render() {
     return (
-      <button className="button" onClick={this.props.handleSubmit}>{this.props.name}</button>
+      <div className={this.props.red ? 'Button red' : ''} onClick={this.props.handleClick}>{this.props.name}</div>
     );
   }
 }

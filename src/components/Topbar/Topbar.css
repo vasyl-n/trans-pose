@@ -1,0 +1,38 @@
+.Topbar {
+  color: white;
+  height: 70px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.logo {
+  font-size: 28px;
+  font-variant: all-small-caps;
+}
+
+.logo span {
+  color: darkviolet;
+  font-size: 35px;
+  font-family: monospace;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation div {
+  background-color: unset;
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.navigation div:hover {
+  cursor: pointer;
+  border-bottom: white solid 1px;
+}
