@@ -2,10 +2,11 @@
   position: relative;
   display: flex;
   height: 100vh;
+  z-index: 1;
 }
 
 .Hero .image-wrap {
-  background-image: url(/static/media/headphone.a4821408.jpeg);
+  background-image: url('../../images/headphone.jpeg');
   position: absolute;
   top: 0;
   bottom: 0;

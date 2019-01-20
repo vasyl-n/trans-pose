@@ -6,6 +6,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -14,25 +18,34 @@
 }
 
 .logo span {
-  color: darkviolet;
+  color: red;
   font-size: 35px;
   font-family: monospace;
 }
 
-.navigation {
+.navigation ul {
   display: flex;
 }
 
-.navigation div {
+.navigation li {
   background-color: unset;
   border: none;
   color: white;
   font-size: 15px;
   padding: 5px;
   margin: 5px;
+  list-style: none;
+}
+.navigation a {
+  text-decoration: none;
+  color: white;
 }
 
-.navigation div:hover {
+.navigation li:hover {
   cursor: pointer;
   border-bottom: white solid 1px;
+}
+
+.is-current {
+  border-bottom: white solid 1px !important;
 }

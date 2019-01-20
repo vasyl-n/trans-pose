@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
-import './Topbar.css'
-import Transpose from '../Transpose/Transpose'
+import './Topbar.css';
+import Scrollspy from 'react-scrollspy';
 
 class Topbar extends Component {
   state = {
@@ -10,11 +10,14 @@ class Topbar extends Component {
   render() {
     return (
       <div className="Topbar">
-        <div className="logo">Transpose<span>.</span></div>
+        <div className="logo">Trans-pose<span>.</span></div>
         <div className="navigation">
-          <div>Home</div>
-          <div>About</div>
-          <div>Contact</div>
+          <Scrollspy offset={-100} items={ ['home', 'app', 'contact'] } currentClassName="is-current" >
+            <li><a href="#home">Home</a></li>
+            <li><a href="#app">App</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/test">Github</a></li>
+          </Scrollspy>
         </div>
       </div>
     );

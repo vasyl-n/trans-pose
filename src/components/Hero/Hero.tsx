@@ -7,7 +7,7 @@ interface HeroProps {header: string, copy: string, handleClick:any}
 class Hero extends Component<HeroProps, {}> {
   render() {
     return (
-      <div className="Hero">
+      <div className="Hero" id="home">
         <div className="image-wrap"></div>
         <div className="content">
           <div className="header">{this.props.header}</div>
