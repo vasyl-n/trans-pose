@@ -1,0 +1,24 @@
+.contact {
+  max-height: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  padding: 30px;
+}
+
+.contact-header {
+  font-size: 38px;
+  text-align: left;
+  padding: 20px;
+}
+
+.contact-copy {
+  font-size: 40px;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}

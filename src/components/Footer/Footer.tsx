@@ -6,7 +6,11 @@ interface FooterProps {}
 class Footer extends Component<FooterProps, {}> {
   render() {
     return (
-      <div className="Footer">this is a footer</div>
+      <div className="Footer">
+        <div className="links">
+          <a href="github">Check it out on Github</a>
+        </div>
+      </div>
     );
   }
 }
