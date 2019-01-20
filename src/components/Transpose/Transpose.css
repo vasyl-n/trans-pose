@@ -12,3 +12,20 @@
   margin: 10px;
   padding: 10px;
 } 
+
+.transpose-numbers:hover {
+  background: black;
+  border: 1px solid black;
+  color: white;
+} 
+
+.active-true {
+  color: white;
+  background: black;
+}
+
+.result {
+  white-space: pre-wrap;
+  text-align: left;
+  margin: 20px;
+}

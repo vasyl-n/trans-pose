@@ -7,11 +7,11 @@ import './Transpose.css';
 class Transpose extends Component {
   state = {
     currentInput: '',
-    isPlus: true,
-    number: 2,
+    result: '',
+    transposerPosition: 0,
   }
-  handleSubmit = () => {
-    transposeHandler(this.state.currentInput, true, 3)
+  handleSubmit = (num: any) => {
+    this.setState({result: transposeHandler(this.state.currentInput, num), transposerPosition: num});
   }
 
   handleInputChange = (input: string) => {
@@ -19,18 +19,23 @@ class Transpose extends Component {
   }
 
   render() {
+    console.log(this.state.result)
     return (
-      <div className="Transpose">
+      <div className="Transpose" id="app">
         <TextInput handleChange={this.handleInputChange} />
-        {/* <Button red={false} name='Transpose' handleClick={this.handleSubmit}/> */}
         <div className="control-buttons">
           {
             buttons.map((el, ind) => {
+              const active = this.state.transposerPosition === el;
+              const classname = 'transpose-numbers ' + `active-${active}`
               return (
-                <Button key={ind} className={'transpose-numbers'} name={el.toString()} handleClick={(e: any) => {console.log(e.currentTarget.textContent)}} />
+                <Button key={ind} className={classname} name={el.toString()} handleClick={(e: any) => {this.handleSubmit(Number(e.currentTarget.textContent))}} />
               )
             })
           }
+        </div>
+        <div className="result">
+          {this.state.result}
         </div>
       </div>
     );
