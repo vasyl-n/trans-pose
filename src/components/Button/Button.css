@@ -7,18 +7,22 @@
 }
 
 .red {
+  box-sizing: border-box;
   margin: 10px 0;
-  height: 30px;
-  width: 100px;
+  height: 40px;
+  width: 170px;
   color: white;
   background: red;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .transpose-numbers {
   margin: 10px;
   padding: 10px;
   font-size: 14px;
-  border: 1px solid red;
+  border: 1px solid black;
   height: 20px;
   width: 20px;
   border-radius: 12px;
@@ -26,4 +30,7 @@
 
 .Button:hover{
   cursor: pointer;
+  color: red;
+  background: transparent;
+  border: 2px solid red;
 }

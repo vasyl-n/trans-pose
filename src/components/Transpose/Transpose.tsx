@@ -19,7 +19,6 @@ class Transpose extends Component {
   }
 
   render() {
-    console.log(this.state.result)
     return (
       <div className="Transpose" id="app">
         <TextInput handleChange={this.handleInputChange} />
