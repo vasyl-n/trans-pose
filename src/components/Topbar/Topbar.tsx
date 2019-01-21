@@ -30,7 +30,7 @@ class Topbar extends Component {
               </Link>
             </li>
             <li>
-              <a href="https://github.com/test">Github</a>
+              <a href="https://github.com/vasyl-n/trans-pose">Github</a>
             </li>
           </Scrollspy>
         </div>
