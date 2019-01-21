@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "aws s3 cp ./build s3://trans-pose.com/ --recursive"
+    "build-deploy": "npm run build && aws s3 cp ./build s3://trans-pose.com/ --recursive"
   },
   "eslintConfig": {
     "extends": "react-app"
