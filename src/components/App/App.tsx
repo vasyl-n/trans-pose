@@ -15,8 +15,8 @@ class App extends Component {
       <div className="App">
         <Topbar />
         <Hero 
-          header='Transpose all your songs'
-          copy="Blah blah blah blaaaaa blaaahhh"
+          header='Transpose your songs'
+          copy='Use this app to change your song chords and lyrics to a different key'
           handleClick={()=> 'ble'}
         /> 
         <Transpose />
