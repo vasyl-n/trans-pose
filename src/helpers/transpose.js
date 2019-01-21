@@ -53,7 +53,7 @@ const getFinalNum = (num) => {
     return result - 12;
   }
   if ( result < 1 ) {
-    return 12 - result;
+    return 12 + result;
   }
   return result;
 }

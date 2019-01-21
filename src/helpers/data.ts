@@ -23,7 +23,7 @@ const keysNumsMap = {
   'Ab': 9,
   'B': 12,
   'B#': 1,
-  'Bb': 1,
+  'Bb': 11,
 }
 
 const numsKeysMap = {
