@@ -10,6 +10,16 @@ class App extends Component {
   state = {
   }
 
+  componentDidMount() {
+    if(window.location.host.indexOf('localhost') === -1 ) {
+      const splited = window.location.href.split('://');
+      if(splited[0] === 'http') {
+        const newUrl = `https://${splited[1]}`
+        window.location.href = newUrl;
+      }
+    }
+  }
+
   render() {
     return (
       <div className="App">
