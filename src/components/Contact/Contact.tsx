@@ -10,7 +10,7 @@ class Contact extends Component<ContactProps, {}> {
         <div className="content">
           <div className="header">Do you have a question?</div>
           <div className="copy">Let's connect</div>
-          <a href="mailto:webmaster@trans-pose.com">
+          <a href="mailto:webmaster.transpose@gmail.com">
             <Button className="red" name="Contact" handleClick={()=> true} />
           </a>
         </div>
