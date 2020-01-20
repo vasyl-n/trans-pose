@@ -7,8 +7,6 @@ import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
 
 class App extends Component {
-  state = {
-  }
 
   componentDidMount() {
     if(window.location.host.indexOf('localhost') === -1 ) {

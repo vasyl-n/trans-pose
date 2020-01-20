@@ -1,8 +1,8 @@
-import {keys, endings1, endings2, keysNumsMap, numsKeysMap} from './data';
+import {keysNumsMap, numsKeysMap} from './data';
 
 let NUMBER;
+const SEPARATORS = ['', '|']
 
-let allKeysPermutations = [];
 const transposeHandler = (inputText, number ) => {
   if ( number === 0 ) return inputText;
   NUMBER = number;
@@ -10,7 +10,7 @@ const transposeHandler = (inputText, number ) => {
     return el.split(' ')
   })
   return words.map((arr) => {
-    if(isChordsLine(arr)) {
+    if(replaceChords(arr).indexOf('undefined') < 0) {
       return replaceChords(arr)
     }
     return arr.join(' ')
@@ -19,7 +19,7 @@ const transposeHandler = (inputText, number ) => {
 
 const replaceChords = (arr) => {
   return arr.map((el) => {
-    if( el === '') {
+    if(SEPARATORS.includes(el)) {
       return el;
     } else {
       return replaceChord(el);
@@ -58,28 +58,7 @@ const getFinalNum = (num) => {
   return result;
 }
 
-const isChordsLine = (line) => {
-  return line.reduce((acc, el) => {
-    if( acc === false ) return false;
-    return el === '' || allKeysPermutations.includes(el);
-  }, true);
-}
 
-const makePermutations = () => {
-  const result = keys;
-  keys.forEach((key) => {
-    endings1.forEach((ending1) => {
-      result.push(key+ending1);
-      endings2.forEach((ending2) => {
-        result.push(key+ending2);
-        result.push(key+ending1+ending2);
-      })
-    })
-  })
-  return result;
-}
-
-allKeysPermutations = makePermutations();
 
 
 export {transposeHandler}

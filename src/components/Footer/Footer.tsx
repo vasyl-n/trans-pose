@@ -8,7 +8,7 @@ class Footer extends Component<FooterProps, {}> {
     return (
       <div className="Footer">
         <div className="links">
-          <a href="https://github.com/vasyl-n/trans-pose">Check it out on Github</a>
+          <a href="https://github.com/vasyl-n/trans-pose" target="_blank">View on Github</a>
         </div>
       </div>
     );

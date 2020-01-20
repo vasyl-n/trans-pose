@@ -1,6 +1,15 @@
 const keys = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 const endings1 = ['#', 'b'];
-const endings2 = ['m', 'dim', '7', 'dim7', 'maj','maj7', 'm7', '7-5', 'm7-5']
+const endings2 = [
+  'm', 'm7', '7',
+  'dim', 'dim7', 'dim9', 
+  'maj','maj7',  
+  '7-5', 'm7-5', 
+  '6', 'm6',
+  '9', 'm9', 
+  '11', 'm11', 
+  'm7b5',
+];
 
 const keysNumsMap = {
   'C': 1,

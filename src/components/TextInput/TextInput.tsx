@@ -9,7 +9,7 @@ class TextInput extends Component<TextInputProps, {}> {
       <div className="TextInput">
         <textarea 
           onChange={(e) => this.props.handleChange(e.target.value)}
-          placeholder={`What would you like to transpose?\nPaste your chords and lyrics here`}>
+          placeholder={`Paste your chords and lyrics`}>
         </textarea>
       </div>
     );
