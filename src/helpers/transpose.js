@@ -1,13 +1,13 @@
 import {keysNumsMap, numsKeysMap} from './data';
 
 let NUMBER;
-const SEPARATORS = ['', '|']
+const SEPARATORS = ['', '|', '(', ')']
 
 const transposeHandler = (inputText, number ) => {
   if ( number === 0 ) return inputText;
   NUMBER = number;
   const words = inputText.split('\n').map((el) => {
-    return el.split(' ')
+    return el.split(' ');
   })
   return words.map((arr) => {
     if(replaceChords(arr).indexOf('undefined') < 0) {
@@ -22,7 +22,25 @@ const replaceChords = (arr) => {
     if(SEPARATORS.includes(el)) {
       return el;
     } else {
-      return replaceChord(el);
+      const separator = SEPARATORS.reduce((acc, separator) => {
+        if (acc[0] >= 0) {return acc;}
+        acc[0] = separator !== '' ? el.indexOf(separator) : acc[0];
+        acc[1] = separator !== '' ? separator : acc[1];
+        return acc;
+      }, [-1, '']);
+      // console.log(separator, el)
+      if (separator[0] >= 0) {
+        let arr = el.split('');
+        arr.splice(separator[0], 1);
+        let noChar = arr.join('')
+        const replaced = replaceChord(noChar);
+        let arr1 = replaced.split('');
+        arr1.splice(separator[0], 0, separator[1]);
+        const withSeparator = arr1.join('');
+        return withSeparator
+      } else {
+        return replaceChord(el);
+      }
     }
   }).join(' ');
 }
